@@ -1,0 +1,33 @@
+{
+  "include": [
+    "./src/"
+//    "./**/*.ts", "src/bpmn/config/common.tsx","src/bpmn/config/modules/*.tsx"
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "/#/*": [
+        "./types/*"
+      ]
+    }
+  },
+
+}
