@@ -1,33 +1,30 @@
 {
-  "include": [
-    "./src/"
-//    "./**/*.ts", "src/bpmn/config/common.tsx","src/bpmn/config/modules/*.tsx"
-  ],
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "esnext",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": "src",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "esnext",
+      "es2018",
       "dom"
-    ],
-    "types": [
-      "vite/client"
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "/#/*": [
-        "./types/*"
-      ]
-    }
+    ]
   },
-
+  "angularCompilerOptions": {
+    "resolveJsonModule": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
 }

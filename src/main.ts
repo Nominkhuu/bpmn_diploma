@@ -1,11 +1,13 @@
-import { createApp } from 'vue';
-import App from './App';
-import './index.css';
-import ElementPlus from 'element-plus';
-// import 'element-plus/lib/theme-chalk/index.css';
-import 'element-plus/packages/theme-chalk/src/index.scss';
-import './iconfont.js';
 
-const app = createApp(App);
-app.use(ElementPlus);
-app.mount('#app');
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
