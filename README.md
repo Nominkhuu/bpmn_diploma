@@ -1,14 +1,6 @@
 # ProcessModeler
 
-Web based editor for process modeling based on BPMN diagrams.
-[Demo](https://sim-process-modeler.herokuapp.com/)
-
-The application was developed as part of the Master's thesis.
-
-![Example View of application](doc/example_photo.png)
-
-
-Application offers applying code to the diagram elements so that further on the API server could be compiled and simulate the process.
+Application offers applying code to the diagram elements so that further on the API server could be compiled and simulate the process.Cancel changes
 Also, application have build in monaco editor with Groovy syntax highlighting feature.
 
 ### Development server
